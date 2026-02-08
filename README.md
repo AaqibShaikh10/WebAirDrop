@@ -2,7 +2,7 @@
 
 WebAirDrop is a high-speed, peer-to-peer file transfer tool that works entirely in your browser. It allows you to send files of any size directly to other devices on your local network (or across the internet) without uploading them to a third-party server.
 
-Think of it as AirDrop, but for the web—working across Windows, macOS, Android, and iOS.
+Think of it as AirDrop, but for the web - working across Windows, macOS, Android, and iOS.
 
 ## Features
 
