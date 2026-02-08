@@ -1,0 +1,202 @@
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --bg-color: #121212;
+  --surface-color: #1e1e1e;
+  --surface-hover: #2c2c2c;
+  --primary-color: #bb86fc;
+  --primary-variant: #3700b3;
+  --secondary-color: #03dac6;
+  --error-color: #cf6679;
+  --text-main: #ffffff;
+  --text-muted: #b0b0b0;
+  --border-color: #333333;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+#app {
+  width: 90%;
+  max-width: 800px;
+  padding: 3rem;
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+#status {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  display: inline-block;
+  font-family: monospace;
+  color: var(--secondary-color);
+}
+
+.drop-zone {
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  padding: 3rem;
+  margin: 3rem 0;
+  transition: all 0.2s ease;
+  background-color: var(--bg-color);
+  cursor: pointer;
+}
+
+.drop-zone:hover {
+  border-color: var(--primary-color);
+  background-color: var(--surface-hover);
+}
+
+.drop-zone.dragover {
+  border-color: var(--secondary-color);
+  background-color: rgba(3, 218, 198, 0.05);
+}
+
+.drop-text {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #9965f4;
+}
+
+.peer-list h3,
+.transfers h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+#peers-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.peer-item {
+  background-color: var(--bg-color);
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  transition: border-color 0.2s;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.peer-item::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+}
+
+.peer-item:hover {
+  border-color: var(--text-muted);
+}
+
+.transfers {
+  margin-top: 3rem;
+}
+
+.transfer-item {
+  background-color: var(--bg-color);
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.transfer-info {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-main);
+}
+
+.progress-bar {
+  height: 4px;
+  background-color: var(--surface-hover);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--secondary-color);
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.file-received {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background-color: #1e2828;
+  border: 1px solid var(--secondary-color);
+  border-radius: 6px;
+  color: var(--text-main);
+}
+
+.download-link {
+  color: var(--secondary-color);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  margin-left: 0.5rem;
+}
+
+.download-link:hover {
+  border-bottom-color: var(--secondary-color);
+}
